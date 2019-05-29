@@ -9,10 +9,14 @@ public class Log extends Equation {
     private final double log7 = 0.84510;
 
     // calculates log(x)
-    float calculate(double x) {
+    float calculate(double x) throws Exception{
         int numTens = 0;
         int result = 0;
         int[] factors = {1, 1, 1, 1};
+
+        // special case log 0 = undefined
+        if (x < 1.0)
+            throw new Exception("Log (0) is undefined");
 
         // because log 10 = 1, divide x to simplify equation
         // product rule of logarithms
