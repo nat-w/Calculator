@@ -8,12 +8,11 @@ public class Main {
     }
 
     static String displayMenu() {
-        return  "\n1. " +
-                "\n2. " +
-                "\n3. " +
-                "\n4. " +
-                "\n5. " +
-                "\n6. " +
+        return  "\n1. sin(x)" +
+                "\n2. 10^x" +
+                "\n3. log(x) (base 10)" +
+                "\n4. e^x" +
+                "\n5. sqrt(x)" +
                 "\nEnter the number of the equation you wish to use: ";
     }
 }
