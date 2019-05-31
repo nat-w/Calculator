@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Sin {
+public class sin {
 	public static void main(String[] args)
 	{
 		//System.out.println("Choose the number for an equation: \n 1. sin(x) 2. 10^x 3. log10 x 4. e^x 5. standard deviation");

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         // greeting message
         System.out.println(displayGreeting());
 
@@ -21,6 +21,9 @@ public class Main {
 
         // end the program
         System.out.println(displayClosing());
+        
+        //Test function five
+        //testFunctionFive();
     }
 
     // displays greeting upon running the program
@@ -67,5 +70,20 @@ public class Main {
         double x = in.nextDouble();
         in.close();
         return x;
+    }
+    
+    static void testFunctionFive() {
+    	StandardDeviation stdev = new StandardDeviation();
+		double[] values = new double[] { 1.0, 2.0, 3.0, 4.0, 5.0 };
+		System.out.println("Standard deviation: " + stdev.compute(values));
+                
+        double x = 10.0;
+        Sqrt sqrt = new Sqrt();
+        try {
+			System.out.println("Square root of " + x + " is approximately " + sqrt.calculate(x));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 }
