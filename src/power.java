@@ -1,7 +1,7 @@
 // Java Program to find Power of a Number - 10^x
 import java.util.Scanner;
 
-public class calculator {
+public class power {
 	private static Scanner kb;
 	public static void main(String[] args) 
 	{
