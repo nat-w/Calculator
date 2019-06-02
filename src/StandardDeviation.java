@@ -5,27 +5,21 @@
  */
 public class StandardDeviation {
 	public double compute(double[] values) {
-		
-		try {
-			Exponential exp = new Exponential();
-			Absolute abs = new Absolute();
-			Sqrt sqrt = new Sqrt();
+		Exponential exp = new Exponential();
+		Absolute abs = new Absolute();
+		Sqrt sqrt = new Sqrt();
 			
-			double sum = 0.0;
-			double size = values.length;	
+		double sum = 0.0;
+		double size = values.length;	
 			
-			//Calculate mean
-			double mean = computeMean(values);
+		//Calculate mean
+		double mean = computeMean(values);
 			
-			for (int i = 0; i < size; i++) {				
-				sum += exp.compute(abs.compute(values[i] - mean), 2);
-			}						
+		for (int i = 0; i < size; i++) {				
+			sum += exp.compute(abs.compute(values[i] - mean), 2);
+		}						
 						
-			return sqrt.calculate(sum / size);			
-		} catch (Exception e) { 
-			e.printStackTrace();
-			return 1;
-		}			
+		return sqrt.calculate(sum / size);				
 	}
 	
 	// Calculates the mean of the given values

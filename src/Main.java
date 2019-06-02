@@ -14,7 +14,7 @@ public class Main {
         int equation = getChoice(1, 5);
 
         // get the number to calculate
-        System.out.println(displayXMessage());
+    	System.out.println(displayXMessage());
         double x = getX();
 
         // TODO: create Equation instance and calculate
@@ -74,16 +74,15 @@ public class Main {
     
     static void testFunctionFive() {
     	StandardDeviation stdev = new StandardDeviation();
-		double[] values = new double[] { 1.0, 2.0, 3.0, 4.0, 5.0 };
-		System.out.println("Standard deviation: " + stdev.compute(values));
-                
-        double x = 10.0;
-        Sqrt sqrt = new Sqrt();
-        try {
-			System.out.println("Square root of " + x + " is approximately " + sqrt.calculate(x));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		double[] values = new double[] { 1.0, 2.0, 3.0, 4.0, 5.0 };    	
+		System.out.print("Values: ");
+		for (int i = 0; i < values.length; i++) {
+			if (i != values.length - 1) {
+				System.out.print(values[i] + ", ");
+			} else {
+				System.out.println(values[i]);
+			}			
+		}	
+		System.out.println("Standard deviation: " + stdev.compute(values));                      
     }
 }
