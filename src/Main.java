@@ -3,24 +3,43 @@
 
 import java.util.Scanner;
 
-public class Main {
-
-    static void main(String[] args) {
+public class Main {		
+	private static final Scanner in = new Scanner(System.in);	
+	
+    public static void main(String[] args) {
         // greeting message
         System.out.println(displayGreeting());
 
         // calculator main menu
         System.out.println(displayMenu());
-        int equation = getChoice(1, 5);
-
-        // get the number to calculate
-        System.out.println(displayXMessage());
-        double x = getX();
-
-        // TODO: create Equation instance and calculate
-
+        int choice = getChoice(1, 5);
+                
+        // Direct to equation corresponding to user input choice
+        EquationTypes equation = EquationTypes.valueOf(choice);        
+        switch (equation) {
+	        case SIN_OF_X:
+	        	sin sin = new sin();
+	        	sin.main(args);
+	        	break;
+	        case EXPONENT_BASE_10:
+	        	power power = new power();
+	        	power.main(args);	        	
+	        	break;
+	        case LOG_OF_X:
+	        	System.out.println("log(x)");
+	        	break;
+	        case NATURAL_EXPONENTIAL_FUNCTION:
+	        	System.out.println("e^x");
+	        	break;
+	        case STANDARD_DEVIATION:	      
+	        	StandardDeviation stdev = new StandardDeviation();
+	        	stdev.compute();	        	
+	        	break;
+        }
+                
         // end the program
-        System.out.println(displayClosing());
+        System.out.println(displayClosing());              
+        in.close();             
     }
 
     // displays greeting upon running the program
@@ -40,32 +59,19 @@ public class Main {
                 "\n2. 10^x" +
                 "\n3. log(x) (base 10)" +
                 "\n4. e^x" +
-                "\n5. sqrt(x)" +
+                "\n5. Standard deviation" +
                 "\nEnter the number of the equation you wish to use: ";
     }
 
-    static String displayXMessage() {
-        return "Choose the number to calculate in the chosen equation. x = ";
-    }
-
     // returns the integer for the equation the user chooses
-    static int getChoice(int start, int end) {
-        Scanner in = new Scanner(System.in);
-
+    static int getChoice(int start, int end) {                	
         int choice = in.nextInt();
-
-        if (choice < start || choice > end) {
-            System.out.println("Invalid choice, try again.");
-            getChoice(start, end);
-        }
-        in.close();
-        return choice;
-    }
-
-    static double getX() {
-        Scanner in = new Scanner(System.in);
-        double x = in.nextDouble();
-        in.close();
-        return x;
+        
+        if (choice < start || choice > end) {        		        		
+        	System.out.println("Invalid choice, try again."); 
+        	getChoice(start, end);	
+        }        	        
+        
+        return choice;                      
     }
 }
