@@ -1,3 +1,3 @@
 abstract class Equation {
-    abstract float calculate(double x) throws Exception;
+    abstract double calculate(double x) throws Exception;
 }

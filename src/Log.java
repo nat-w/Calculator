@@ -8,11 +8,12 @@ public class Log extends Equation {
     private final double log5 = 0.69897;
     private final double log7 = 0.84510;
 
+    public Log() {}
+
     // calculates log(x)
-    float calculate(double x) throws Exception{
+    double calculate(double x) throws Exception {
         int numTens = 0;
-        int result = 0;
-        int[] factors = {1, 1, 1, 1};
+        double result = 0;
 
         // special case log 0 = undefined
         if (x < 1.0)
@@ -20,8 +21,8 @@ public class Log extends Equation {
 
         // because log 10 = 1, divide x to simplify equation
         // product rule of logarithms
-        while (x > 10) {
-            x %= 10;
+        while (x > 9.5) {
+            x /= 10.0;
             numTens++;
         }
 
@@ -29,32 +30,23 @@ public class Log extends Equation {
         int y = round(x);
 
         // factor out y
-        for (int i = 0; y <= 1;) {
+        while (y > 2) {
             if (y % 2 == 0) {
                 y /= 2;
-                factors[i] = 2;
-                i++;
+                result += logConstant(2);
             }
             else if (y % 3 == 0) {
                 y /= 3;
-                factors[i] = 3;
-                i++;
+                result += logConstant(3);
             }
             else if (y % 5 == 0) {
                 y /= 5;
-                factors[i] = 5;
-                i++;
+                result += logConstant(5);
             }
             else if (y % 7 == 0) {
                 y /= 7;
-                factors[i] = 7;
-                i++;
+                result += logConstant(7);
             }
-        }
-
-        // add up the log of factors using constants
-        for (int i = 0; i < factors.length; i++) {
-            result += logConstant(factors[i]);
         }
 
         // log 10 = 1, so add the multiples of ten
