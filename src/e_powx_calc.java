@@ -1,5 +1,3 @@
-package e_toThe_power_x_function;
-
 import java.util.Scanner;
 
 import java.util.*;

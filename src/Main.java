@@ -26,10 +26,12 @@ public class Main {
 	        	power.main(args);	        	
 	        	break;
 	        case LOG_OF_X:
+	        	//Instantiate Log class and call driver function
 	        	System.out.println("log(x)");
 	        	break;
 	        case NATURAL_EXPONENTIAL_FUNCTION:
-	        	System.out.println("e^x");
+	        	e_powx_calc e = new e_powx_calc();
+	        	e.main(args);
 	        	break;
 	        case STANDARD_DEVIATION:	      
 	        	StandardDeviation stdev = new StandardDeviation();
