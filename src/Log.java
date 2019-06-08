@@ -1,4 +1,6 @@
 // calculates the log with base ten of a number x
+import java.util.Scanner;
+
 public class Log extends Equation {
 
     // constants to help in calculation
@@ -8,7 +10,19 @@ public class Log extends Equation {
     private final double log5 = 0.69897;
     private final double log7 = 0.84510;
 
-    public Log() {}
+    public Log() {
+        System.out.println("Enter the value for x: ");
+        Scanner in = new Scanner(System.in);
+
+        double x = in.nextDouble();
+
+        try {
+            System.out.println("Log(x) = " + calculate(x));
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 
     // calculates log(x)
     double calculate(double x) throws Exception {

@@ -26,8 +26,8 @@ public class Main {
 	        	power.main(args);	        	
 	        	break;
 	        case LOG_OF_X:
-	        	//Instantiate Log class and call driver function
-	        	System.out.println("log(x)");
+	        	Log log = new Log();
+	        	//System.out.println("log(x)");
 	        	break;
 	        case NATURAL_EXPONENTIAL_FUNCTION:
 	        	e_powx_calc e = new e_powx_calc();
