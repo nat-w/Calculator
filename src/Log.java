@@ -20,21 +20,22 @@ public class Log extends Equation {
     // calculates log(x) using Taylor Series
     double calculate(double x) throws Exception {
         int n = 10; // how many iterations of Taylor Series
-        return TaylorSeriesLN(x, n);
+        return changeOfBase(TaylorSeriesLN(x, n));
     }
 
     // returns the taylor series for ln(x) with n iterations
-    double TaylorSeriesLN(x, n) {
+    double TaylorSeriesLN(double x, int n) {
         double total = 0.0;
         for (int i = 0; i < n; i++) {
-            int sign = exponent(-1.0, n + 1);
-            int numerator = exponent(x - 1.0, n);
+            double sign = HelperFunctions.exponent(-1.0, n + 1);
+            double numerator = HelperFunctions.exponent(x - 1.0, n);
             total += (numerator / n) * sign;
         }
+        return total;
     }
 
     // returns log(x) given that x is ln(x)
-    double changeOfBase(x) {
+    double changeOfBase(double x) {
         return x / 0.4342944819;
     }
 
