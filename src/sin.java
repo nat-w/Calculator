@@ -18,7 +18,7 @@ public class sin {
 		Scanner scan = new Scanner(System.in);
 		double number = scan.nextDouble();
 		
-		// if number is neg, it will b
+		// if number is neg, it will multiplied by -1 to turn it positive
 		if (number < 0){
 			neg = true;
 			number = number * -1;
