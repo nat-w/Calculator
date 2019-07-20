@@ -43,14 +43,14 @@ public class sin {
 			}
 			else if(RedNum > 180){
 				newNum = RedNum - 180;
-				answer = -1*sin(newNum);
+				answer = -1*sinF(newNum);
 			}
 			else if(RedNum > 90){
 				newNum = RedNum - 90;
 				answer = 1*cos(newNum);
 			}
 			else{
-				answer = sin(RedNum);
+				answer = sinF(RedNum);
 			}
 			
 			if(neg == true)
@@ -77,7 +77,7 @@ public class sin {
 		return result;	
 	}
 	
-	public static double sin(double num) {
+	public static double sinF(double num) {
 		// change number to radians
 		final double pi = 3.1415926535897932384626433832795;
 		double rad = (num * pi)/180;
