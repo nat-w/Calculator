@@ -12,23 +12,25 @@ public class sin {
 		boolean neg = false;
 	
 		//Prompt user for a number
-		System.out.println("Choose a number :");
+		System.out.println("Choose a number : ");
 		
-		// Get entered number
+		// Get entered value
 		Scanner scan = new Scanner(System.in);
 		double number = scan.nextDouble();
-		
-		// if number is neg, it will multiplied by -1 to turn it positive
-		if (number < 0){
-			neg = true;
-			number = number * -1;
-		}
-		
-		if(number == 0 || number == 180 || number == 360)
+			
+		if(number == 0 || number == 180 || number == 360 || number == -180 || number == -360)
 			System.out.println("sin(" + number + ") = 0.");
 		else if(number == 90)
 			System.out.println("sin(" + number + ") = 1.");
+		else if(number == -90)
+			System.out.println("sin(" + number + ") = -1.");
 		else{
+			// if number is neg, multiply by -1 to turn ir positive
+			if (number < 0){
+				neg = true;
+				number = number * -1;
+			}
+			
 			RedNum = number;
 			
 			while(RedNum > 360){
@@ -50,6 +52,7 @@ public class sin {
 			else{
 				answer = sin(RedNum);
 			}
+			
 			if(neg = true)
 				System.out.println("sin(" + (number * - 1) + ") = " + (answer * - 1));
 			else
