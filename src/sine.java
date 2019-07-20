@@ -25,7 +25,7 @@ public class sine {
 		else if(number == -90)
 			System.out.println("sin(" + number + ") = -1.");
 		else{
-			// if number is neg, multiply by -1 to turn ir positive
+			// if number is negative, multiply by -1 to make it positive
 			if (number < 0){
 				neg = true;
 				number = number * -1;
