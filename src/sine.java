@@ -19,11 +19,11 @@ public class sine {
 		double number = scan.nextDouble();
 			
 		if(number == 0 || number == 180 || number == 360 || number == -180 || number == -360)
-			System.out.println("sin(" + number + ") = 0.");
+			System.out.println("sin(" + number + ") = 0");
 		else if(number == 90)
-			System.out.println("sin(" + number + ") = 1.");
+			System.out.println("sin(" + number + ") = 1");
 		else if(number == -90)
-			System.out.println("sin(" + number + ") = -1.");
+			System.out.println("sin(" + number + ") = -1");
 		else{
 			// if number is negative, multiply by -1 to make it positive
 			if (number < 0){
