@@ -17,6 +17,8 @@ public class sin {
 		// Get entered value
 		Scanner scan = new Scanner(System.in);
 		double number = scan.nextDouble();
+		
+		scan.close(); 
 			
 		if(number == 0 || number == 180 || number == 360 || number == -180 || number == -360)
 			System.out.println("sin(" + number + ") = 0");
