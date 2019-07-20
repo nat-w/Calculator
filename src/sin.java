@@ -53,8 +53,8 @@ public class sin {
 				answer = sin(RedNum);
 			}
 			
-			if(neg = true)
-				System.out.println("sin(" + (number * - 1) + ") = " + (answer * - 1));
+			if(neg == true)
+				System.out.println("sin(" + number + ") = " + (answer * - 1));
 			else
 				System.out.println("sin(" + number + ") = " + answer);
 		}
