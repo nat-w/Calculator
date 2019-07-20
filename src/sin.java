@@ -5,7 +5,7 @@ public class sin {
 	{
 		/* variables for calculations
 		 *  answer will contain the final answer
-		 *  RedNum is the value of the number after the loop 
+		 *  RedNum is the value of the number (after some modification or not)
 		 *  newNum is used when calculating answer using the addition formula for sine
 		 */
 		double answer = 0, RedNum, newNum = 0;
