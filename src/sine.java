@@ -28,10 +28,10 @@ public class sine {
 			// if number is negative, multiply by -1 to make it positive
 			if (number < 0){
 				neg = true;
-				number = number * -1;
+				RedNum = number * -1;
 			}
-			
-			RedNum = number;
+			else
+				RedNum = number;
 			
 			while(RedNum > 360){
 				RedNum = RedNum - 360;
