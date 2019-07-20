@@ -18,7 +18,7 @@ public class Main {
         EquationTypes equation = EquationTypes.valueOf(choice);        
         switch (equation) {
 	        case SIN_OF_X:
-	        	sine sin = new sine();
+	        	sin sin = new sin();
 	        	sin.main(args);
 	        	break;
 	        case EXPONENT_BASE_10:
