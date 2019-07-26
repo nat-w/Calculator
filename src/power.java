@@ -1,28 +1,46 @@
 // Java Program to find Power of a Number - 10^x
 import java.util.Scanner;
 
-public class power {
-	private static Scanner kb;
-	public static void main(String[] args) 
+public class Power {
+	public static void main(String[] args){
+	Scanner kb = new Scanner(System.in);
 	{
 		int base=10;
-		int p, exponent;
-		long power = 1;
+		int exponent=1;
+		
 		kb = new Scanner(System.in);
 		
 		System.out.println("_________________________________________________________");
 		System.out.println("                Function: 10^x                           ");
 		System.out.println("_________________________________________________________");
 		System.out.print(" Please Enter the Exponent Value : ");
-		exponent = kb.nextInt();	
+		exponent = kb.nextInt();
 		
-		for(p = 1; p <= exponent; p++)
-		{
-			power = power * base;
+		double result = computepower(base, exponent);
+		System.out.println(base+ " to the power of "+ exponent +" = "+ result +".");
 		}
-		System.out.println("\n The result of " + base + " power " + exponent + " = " + power);
 	}
+	
+	
+	private static double computepower(int base, int exponent) {
+		 double result = 1;
+		    if(exponent==0)// base case
+		       return 1;
+		    
+		    if(exponent>0){
+		         for(int i = 0;i<exponent;i++)
+		         { 
+		              result *= base;
+		         }
+		    }
+		    else
+		    {
+		      for(int i = exponent;i<0;i++)
+		         {  
+		              result *= base;
+		         }
+		           result = 1/result;
+		    }
+		    return result;
+		}
 }
-
-
-
