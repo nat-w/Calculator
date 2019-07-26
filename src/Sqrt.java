@@ -5,16 +5,14 @@
  *
  */
 public class Sqrt {		 
-	double calculate(double number) {				
-	 	Absolute abs = new Absolute();
+	double calculate(double x) {
         final double accuracy = 1.0e-15; // Use for relative error calculation
-        double squareRoot = number; // Initialize to given number
+        double squareRoot = x; // Initialize to given number
         
         // Exit loop when target accuracy is obtained
-        while (Math.abs(squareRoot - (number / squareRoot)) > (accuracy * squareRoot)) {
-            squareRoot = (squareRoot + (number / squareRoot)) / 2.0;
-        }	           
-        
+        while (HelperFunctions.absoluteValue(squareRoot - (x / squareRoot)) > (accuracy * squareRoot)) {
+            squareRoot = (squareRoot + (x / squareRoot)) / 2.0;
+        }
 	    return squareRoot;
 	}
 }
