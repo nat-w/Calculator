@@ -12,7 +12,7 @@ public class sin {
 		boolean neg = false;
 	
 		//Prompt user for a number
-		System.out.println("Enter an angle (in degrees) : ");
+		System.out.println("Enter a number (in degrees) : ");
 		
 		// Get entered value
 		Scanner scan = new Scanner(System.in);
