@@ -12,6 +12,7 @@ public class sin {
 		boolean neg = false;
 	
 		//Prompt user for a number
+		System.out.println("ANswer will be displayed in degrees and not radians");
 		System.out.println("Choose a number : ");
 		
 		// Get entered value
