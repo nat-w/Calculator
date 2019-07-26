@@ -21,7 +21,6 @@ public class Power {
 		}
 	}
 	
-	
 	private static double computepower(int base, int exponent) {
 		 double result = 1;
 		    if(exponent==0)// base case
