@@ -5,9 +5,9 @@ public class Log {
 
     // calculates log(x) using Taylor Series
     public double calculate (double x) {
-        int n = 5; // how many iterations of Taylor Series
+        int n = 15; // how many iterations of Taylor Series
 
-        if (x == 1)
+        if (x == 1.0)
             return 0.0;
 
         else if (x <= 0.0)
@@ -20,8 +20,7 @@ public class Log {
     double TaylorSeriesLN(double x, int n) {
         double total = 0.0;
         for (int i = 1; i <= n; i++) {
-            double numerator = HelperFunctions.exponent(x - 1.0, i);
-            total += (numerator / i) * HelperFunctions.exponent(-1.0, (i + 1));
+            total += (HelperFunctions.exponent((x - 1.0), i) / HelperFunctions.factorial(i)) * HelperFunctions.exponent(-1.0, (i - 1));
         }
         return total;
     }

@@ -7,13 +7,14 @@ public class HelperFunctions {
 
     // returns x^n
     public static double exponent(double x, int n) {
+        double result = 1.0;
         if (n == 0)
             return 1.0;
 
         for (int i = 0; i < n; i++) {
-            x *= x;
+            result *= x;
         }
-        return  x;
+        return  result;
     }
 
     public static int factorial(int num) {
