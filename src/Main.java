@@ -28,7 +28,7 @@ public class Main {
             // Direct to equation corresponding to user input choice
             switch (choice) {
                 case 1:
-                    sin sin = new sin();
+                    Sin sin = new Sin();
                     System.out.println("Sin(" + x + ") = " + sin.calculate(x));
                     break;
                 case 2:
