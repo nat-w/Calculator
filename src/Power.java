@@ -1,4 +1,4 @@
-public class power {
+public class Power {
     
      static double calculate(double x) {
          double result = 1;
