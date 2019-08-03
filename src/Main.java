@@ -28,11 +28,11 @@ public class Main {
             // Direct to equation corresponding to user input choice
             switch (choice) {
                 case 1:
-                    Sin sin = new Sin();
+                    sin sin = new sin();
                     System.out.println("Sin(" + x + ") = " + sin.calculate(x));
                     break;
                 case 2:
-                    Power power = new Power();
+                    power power = new power();
                     System.out.println("10^" + x + " = " + power.calculate(x));
                     break;
                 case 3:
