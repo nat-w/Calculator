@@ -32,7 +32,7 @@ public class Main {
                     System.out.println("Sin(" + x + ") = " + sin.calculate(x));
                     break;
                 case 2:
-                    power power = new power();
+                    Power Power = new Power();
                     System.out.println("10^" + x + " = " + power.calculate(x));
                     break;
                 case 3:
