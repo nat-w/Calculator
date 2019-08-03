@@ -33,7 +33,7 @@ public class Main {
                     break;
                 case 2:
                     Power Power = new Power();
-                    System.out.println("10^" + x + " = " + power.calculate(x));
+                    System.out.println("10^" + x + " = " + Power.calculate(x));
                     break;
                 case 3:
                     Log log = new Log();
