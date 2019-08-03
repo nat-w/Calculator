@@ -3,10 +3,10 @@ public class Sin {
 	{
 		/* variables for calculations
 		 *  answer will contain the final answer
-		 *  RedNum is the value of the number (after some modification or not)
-		 *  newNum is used when calculating answer using the addition formula for sine
+		 *  modifiedNumber is the value of the number (after some modification or not)
+		 *  newNumber is used when calculating answer using the addition formula for sine
 		 */
-		double answer = 0, RedNum, newNum = 0;
+		double answer = 0, modifiedNumber, newNumber = 0;
 		boolean neg = false;
 			
 		if (x == 0 || x == 180 || x == 360 || x == -180 || x == -360)
@@ -19,29 +19,29 @@ public class Sin {
 			// if number is negative, multiply by -1 to make it positive
 			if (x < 0){
 				neg = true;
-				RedNum = x * -1;
+				modifiedNumber = x * -1;
 			}
 			else
-				RedNum = x;
+				modifiedNumber = x;
 			
-			while (RedNum > 360) {
-				RedNum = RedNum - 360;
+			while (modifiedNumber > 360) {
+				modifiedNumber = modifiedNumber - 360;
 			}
 			
-			if (RedNum > 270) {
-				newNum = RedNum - 270;
-				answer = -1 * cos(newNum);
+			if (modifiedNumber > 270) {
+				newNumber = modifiedNumber - 270;
+				answer = -1 * cos(newNumber);
 			}
-			else if (RedNum > 180) {
-				newNum = RedNum - 180;
-				answer = -1 * sinF(newNum);
+			else if (modifiedNumber > 180) {
+				newNumber = modifiedNumber - 180;
+				answer = -1 * sinF(newNumber);
 			}
-			else if (RedNum > 90) {
-				newNum = RedNum - 90;
-				answer = 1 * cos(newNum);
+			else if (modifiedNumber > 90) {
+				newNumber = modifiedNumber - 90;
+				answer = 1 * cos(newNumber);
 			}
 			else {
-				answer = sinF(RedNum);
+				answer = sinF(modifiedNumber);
 			}
 			
 			if (neg == true)
